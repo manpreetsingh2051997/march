@@ -10,17 +10,15 @@ namespace C0726407
     {
         static void Main(string[] args)
         {
-           
+            Console.WriteLine("Downloading file");
+            Download();
+            Console.ReadLine();
         }
-    }
-
+    
         static void Download()
-        {
+    {
         Thread.Sleep(3000);
-        }
-
-
-
-        public int Add(int a, int b) { return a + b; }
+            Console.WriteLine("Download complete");
     }
+}
 }
