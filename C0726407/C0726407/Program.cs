@@ -10,15 +10,13 @@ namespace C0726407
     {
         static void Main(string[] args)
         {
-            HelloWorld hw = new HelloWorld();
-            hw.Hello();
+           
         }
     }
-    class HelloWorld
-    {
-        public void Hello()
+
+        static void Download()
         {
-            Console.WriteLine("Hello World");
+        Thread.Sleep(3000);
         }
 
 
