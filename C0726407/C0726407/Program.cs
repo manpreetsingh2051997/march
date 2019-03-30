@@ -14,11 +14,21 @@ namespace C0726407
             Download();
             Console.ReadLine();
         }
-    
-        static void Download()
-    {
-        Thread.Sleep(66000);
-            Console.WriteLine("Download complete");
+
+        static async void Download()
+        {
+            await Network.Download();
+            Console.WriteLine("download complete");
+        }
+
+
+        class Network
+        {
+            static public Task Download()
+            {
+                return Task.Run(() = ThreadStaticAttribute.Sleep(66000));
+            }
+        }
     }
 }
-}
+
