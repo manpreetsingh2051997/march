@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -24,12 +25,16 @@ namespace C0726407
 
         class Network
         {
-            public async void Download();
-            {
-            HttClient client = new HttpClient();
-            var data = await client.GetStringAssync("http://torontopubliclibrary");
+           static ArrayList WebPagesContents = new ArrayList();
+            public static async Task Download();{
+            HttpClient client = new HttpClient();
+            string data = await client.GetStringAssync("http://torontopubliclibrary");
             Console.WriteLine(data);
-           }
+                foreach (var i in data)
+                {
+                WebPageContents.Add(i);
+        }
     }
 }
+
 
