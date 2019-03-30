@@ -24,11 +24,12 @@ namespace C0726407
 
         class Network
         {
-            static public Task Download()
+            public async void Download();
             {
-                return Task.Run(() = ThreadStaticAttribute.Sleep(66000));
-            }
-        }
+            HttClient client = new HttpClient();
+            var data = await client.GetStringAssync("http://torontopubliclibrary");
+            Console.WriteLine(data);
+           }
     }
 }
 
